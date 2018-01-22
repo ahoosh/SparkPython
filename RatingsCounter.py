@@ -4,7 +4,7 @@ from pyspark import SparkConf, SparkContext
 import collections
 
 conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
-sc = SparkContext(conf = conf)
+sc = SparkContext(conf=conf)
 
 lines = sc.textFile("file:///Users/abbas/Documents/Projects_Repositories/SparkPython/data/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[2])
